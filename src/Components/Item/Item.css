@@ -1,0 +1,54 @@
+
+.itemContainer{
+
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 17rem;
+    border-radius: 2%;
+    box-shadow: 1px 4px 3px #d5d5d5;
+}
+
+.itemInfoContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffee5d;
+    align-items: start;
+
+}
+
+.itemTitle{
+    font-family: 'Roboto', sans-serif;
+    height: 4rem;
+    color: black;
+    margin: 1rem;
+}
+
+.itemImage{
+    width: 17rem;
+    height: 22rem;
+    object-fit: cover;
+
+}
+.itemImage:hover{
+    object-fit: contain;
+}
+
+.itemPrice{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    margin: 0.5rem 1rem;
+}
+
+.itemShowMore{
+    font-family: 'Roboto', sans-serif;
+    color: #3f7eff;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.itemShowMore:hover {
+    background-color:#eadc5d; 
+
+    width: 89%;
+  }

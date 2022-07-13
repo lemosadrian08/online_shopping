@@ -1,0 +1,33 @@
+header {
+    background-color: #3f7eff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 5rem;
+    box-shadow: 1px 4px 3px #d5d5d5;
+}
+    
+.logo{
+    width: 5rem;
+}
+
+nav{
+    width: 75%;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+li{
+    margin: 1rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}

@@ -1,0 +1,68 @@
+.itemDetailCountainer{
+    display: grid;
+    grid-template-areas: 
+    "img title"
+    "img description"
+    "img price"
+    "img counter";
+
+    margin: 2rem 5%;
+}
+.itemDetailInfoCountainer{
+    background-color: rgb(242, 242, 242);
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2%;
+    box-shadow: 1px 4px 3px #d5d5d5;
+}
+
+.titleDetail{
+    font-family: 'Roboto', sans-serif;
+    grid-area: title;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    margin: 5% auto;
+    justify-content: center;
+    font-size: 2rem;
+}
+.imgDetail{
+    width: 85%;
+    height: 35rem;
+    object-fit: contain;
+    grid-area: img;
+    color: black;
+}
+.priceDetail{
+    font-family: 'Roboto', sans-serif;
+    grid-area: description;
+    color: black;
+    margin: 0 auto 5%;
+    font-size: 1.2rem;
+    width: 85%;
+    margin:auto;
+}
+
+.descriptionDetail{
+    font-family: 'Roboto', sans-serif;
+    grid-area: description;
+    color: black;
+    margin: 0 auto 5%;
+    font-size: 1.2rem;
+    width: 85%;
+
+    margin:auto;
+}
+
+.PTCOButtom{
+    font-family: 'Roboto', sans-serif;
+    background-color: #3f7eff;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    margin:  0.5rem 0;
+    box-shadow: 1px 4px 3px #d5d5d5;
+    cursor: pointer;
+}
