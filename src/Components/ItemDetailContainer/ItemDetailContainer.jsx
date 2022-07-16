@@ -9,7 +9,6 @@ import { useParams } from  "react-router-dom";
 const ItemDetailContainer =()=>{
 
     const {itemId} = useParams()
-    console.log(itemId);
 
     const [ product, setProduct ] = useState([])
     const [ error, setError ] = useState(false)
@@ -32,7 +31,7 @@ const ItemDetailContainer =()=>{
 
     {loading? <div className='spinnerContainer'><SpinnerDotted color='#004dff'/></div> :
             error? <p>Error</p> :
-            <ItemDetail key={product.id} id={product.id} title={product.title} pictureURL={product.image} description={product.description} price={product.price}/>}
+            <ItemDetail key={product.id} product={product} id={product.id} title={product.title} pictureURL={product.image} description={product.description} price={product.price}/>}
     </>
     )
 }

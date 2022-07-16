@@ -66,3 +66,22 @@
     box-shadow: 1px 4px 3px #d5d5d5;
     cursor: pointer;
 }
+
+.checkoutButtomContainer{
+    display: flex;
+    margin: auto;
+    width: 85%;    
+    grid-area: counter;
+    flex-direction: column;
+}
+.checkoutButtom{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: #3f7eff;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    margin:  0.5rem 0;
+    box-shadow: 1px 4px 3px #d5d5d5;
+    cursor: pointer;
+}

@@ -20,7 +20,7 @@ const Nav =()=>{
             <Link to="/"><img  src={logo} className="logo" alt="Logo" /></Link>
             <nav>
                 <ul >
-                    {categories.map((category)=><li><NavLink to={category.route}>{category.name}</NavLink></li>)}
+                    {categories.map((category)=><li key={category.id} ><NavLink  to={category.route}>{category.name}</NavLink></li>)}
                 </ul>
             </nav>
             <Link to='/cart'><CartWidget/></Link>
