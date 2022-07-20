@@ -1,0 +1,40 @@
+.itemCartCardCountainer{
+    display: flex;
+    margin: 1rem 5% 1rem 1rem;
+}
+.itemCartCardInfoCountainer{
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    border-radius: 2%;
+    box-shadow: 1px 4px 3px #d5d5d5;
+}
+
+.titleCartCard{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.imgCartCard{
+    width: 15%;
+    height: 4rem;
+    margin: 1rem;
+    object-fit: contain;
+    color: black;
+}
+.priceCartCard{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+.clearIconContainer{
+    display: flex;
+    margin: auto 0 auto 0.5rem;
+}

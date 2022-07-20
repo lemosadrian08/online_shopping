@@ -1,0 +1,30 @@
+.emptyMessageContainer{
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.emptyMessage{
+    font-family: 'Roboto', sans-serif;
+}
+
+.link{
+    color: #3f7eff;
+    font-size: 1rem;
+}
+
+.clearButtomContainer{
+    display: flex;
+    justify-content: center;
+}
+.clearButtom{
+    font-family: 'Roboto', sans-serif;
+    width: 25%;
+    background-color: #3f7eff;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    margin:  0.5rem 0;
+    box-shadow: 1px 4px 3px #d5d5d5;
+    cursor: pointer;
+}
