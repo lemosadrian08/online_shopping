@@ -67,14 +67,14 @@
     cursor: pointer;
 }
 
-.checkoutButtomContainer{
+.goToCartContainer{
     display: flex;
     margin: auto;
     width: 85%;    
     grid-area: counter;
     flex-direction: column;
 }
-.checkoutButtom{
+.goToCartButtom{
     font-family: 'Roboto', sans-serif;
     width: 100%;
     background-color: #3f7eff;

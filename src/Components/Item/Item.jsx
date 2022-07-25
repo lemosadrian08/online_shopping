@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item =({id, title, price, pictureURL})=>{
 
-    const route = `/${id}`
+    const route = `/item/${id}`
 
     return(
         <div className='itemContainer'>

@@ -9,18 +9,17 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
-
-<BrowserRouter>
-  <CustomProvider>
-    <Nav/>
-    <Routes>
-      <Route path='/' element={<ItemListContainer />}/>
-      <Route path='/category/:categoryName' element={<ItemListContainer greeting='hola' />}/>
-      <Route path='/:itemId' element={<ItemDetailContainer />}/>
-      <Route path='/cart' element={<Cart />}/>
-    </Routes>
-  </CustomProvider>
-</BrowserRouter>
+    <BrowserRouter>
+      <CustomProvider>
+        <Nav/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer />}/>
+          <Route path='/category/:categoryName' element={<ItemListContainer greeting='hola' />}/>
+          <Route path='/item/:itemId' element={<ItemDetailContainer />}/>
+          <Route path='/cart' element={<Cart />}/>
+        </Routes>
+      </CustomProvider>
+    </BrowserRouter>
   );
 }
 

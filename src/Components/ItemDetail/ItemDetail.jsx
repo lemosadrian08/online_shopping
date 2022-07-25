@@ -18,7 +18,7 @@ const ItemDetail =({product, id,title,description,pictureURL,price})=>{
         counter > 0 && setUnits(counter)
     }
 
-    const checkout =()=>{
+    const goToCart =()=>{
         addItem({...product, quantity: units})
     }
 
@@ -32,7 +32,7 @@ const ItemDetail =({product, id,title,description,pictureURL,price})=>{
                 <p className="priceDetail">${price}</p>
                 {
                 units!=0
-                ? <div className="checkoutButtomContainer"><Link to='/cart'><button onClick={checkout} className="checkoutButtom">Proceed to checkout</button></Link></div>  
+                ? <div className="goToCartContainer"><Link to='/cart'><button onClick={goToCart} className="goToCartButtom">Go to cart</button></Link></div>  
                 : <ItemCount stock={5} initial={0} onAdd={onAdd} />
                 }
             </div>

@@ -3,6 +3,8 @@ import ItemDetail from '../ItemDetail/ItemDetail.jsx'
 import { SpinnerDotted } from 'spinners-react';
 import './ItemDetailContainer.css'
 import { useParams } from  "react-router-dom";
+import { db } from '../../firebase/firebase'
+import { getDoc, collection, doc } from 'firebase/firestore'
 
 
 
@@ -17,12 +19,25 @@ const ItemDetailContainer =()=>{
  
     useEffect(()=>{
 
+        const productCollection = collection(db, 'products')
+        const refDoc = doc(productCollection, itemId)
+        getDoc(refDoc)
+        .then (result =>{
+            const productdb = {
+                id: result.id,
+                ...result.data()
+            }
+            setProduct(productdb)
+        })
+        .catch(()=>setError(true))
+        .finally(()=>setLoading(false)) 
 
-        fetch(`https://fakestoreapi.com/products/${itemId}`)
+
+        /* fetch(`https://fakestoreapi.com/products/${itemId}`)
             .then(res=>res.json())
             .then(data=>setProduct(data))
             .catch(()=>setError(true))
-            .finally(()=>setLoading(false))
+            .finally(()=>setLoading(false)) */
         },[]) 
 
 

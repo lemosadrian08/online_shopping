@@ -14,7 +14,6 @@ const Nav =()=>{
         {name:"Women's clothing",id:3,route:"/category/women's clothing"}
     ]
 
-
     return(
         <header >
             <Link to="/"><img  src={logo} className="logo" alt="Logo" /></Link>
@@ -24,11 +23,8 @@ const Nav =()=>{
                 </ul>
             </nav>
             <Link to='/cart'><CartWidget/></Link>
-            
-          
         </header>
             
-        
     )
 }
 
