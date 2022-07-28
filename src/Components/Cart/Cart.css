@@ -13,13 +13,13 @@
     font-size: 1rem;
 }
 
-.clearButtomContainer{
+.ButtomsContainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
-.clearButtom{
+.clearButtom ,.checkoutButtom{
     font-family: 'Roboto', sans-serif;
-    width: 25%;
     background-color: #3f7eff;
     font-size: 1rem;
     color: white;

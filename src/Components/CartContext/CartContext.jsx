@@ -6,7 +6,8 @@ const CartProvider =({children})=>{
 
     const [products, setProducts] = useState([])
     const [quantityProducts, setQuantityProducts] = useState(0)
-    console.log(quantityProducts); 
+    const [total, setTotal] =useState(0)
+
 
     const getQuantityProducts =()=>{
         let quantity = 0
@@ -15,11 +16,22 @@ const CartProvider =({children})=>{
         })
         setQuantityProducts(quantity)
     }
+    
+    const getTotal =()=>{
+        let resultado = 0
+        let total = 0
+        products.forEach(product=>{
+            resultado += (product.price * product.quantity)
+            total=resultado.toFixed(2)
+        })
+        setTotal(total)
+    }
 
     useEffect(()=>{
         getQuantityProducts()
+        getTotal()
     }, [products])
-    
+
     const addItem =(product)=>{
         if (isInCart(product.id)){
             const aux = [...products]
@@ -44,7 +56,7 @@ const CartProvider =({children})=>{
     }
 
     return(
-        <Provider value={ {products, quantityProducts, addItem, removeItem, clear, isInCart} }>
+        <Provider value={ {products, quantityProducts, total, addItem, removeItem, clear, isInCart} }>
             {children}
         </Provider>
     )
