@@ -28,14 +28,12 @@ const Checkout =()=>{
         })
         .then((result)=>{
             setIdSales(result.id)
-            console.log(idSales);
-        })
-        .then(()=>{
             Swal.fire(
                 'The order has been placed',
-                `${idSales}`,
+                `This is the id of your order: ${result.id}`,
                 'success')
         })
+
         clear()
 
     }
