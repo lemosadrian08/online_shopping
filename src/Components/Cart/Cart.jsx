@@ -22,10 +22,10 @@ const Cart =()=>{
             :
             <div>
                 {products.map((product)=><CartCard key={product.id} id={product.id} title={product.title} price={product.price} quantity={product.quantity} pictureURL={product.image} /> )}
-                <p className='total'>total: {total}</p>
+                <p className='total'>Total: ${total}</p>
                 <div className='ButtomsContainer'>
+                    <Link className='buttomCheckoutContainer' to='/checkout'><button className='checkoutButtom'>Proceed to checkout</button></Link>
                     <button className='clearButtom' onClick= { clear }>Clear all products</button> 
-                    <Link to='/checkout'><button className='checkoutButtom'>Proceed to checkout</button></Link>
                 </div>        
             </div>
          }

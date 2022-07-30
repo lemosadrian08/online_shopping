@@ -9,7 +9,7 @@ import Swal from 'sweetalert2'
 
 const Checkout =()=>{
 
-    const { products, total, clear } = useContext(cartContext)
+    const { products, total, clear, totalat, totalbt, taxes, quantityProducts} = useContext(cartContext)
 
     const [ name, setName ] = useState("")
     const [ number, setNumber ] = useState("")
@@ -30,7 +30,7 @@ const Checkout =()=>{
             setIdSales(result.id)
             Swal.fire(
                 'The order has been placed',
-                `This is the id of your order: ${result.id}`,
+                `This is your order id: ${result.id}`,
                 'success')
         })
 
@@ -55,23 +55,35 @@ const Checkout =()=>{
     <>
     {customer.name==null
     ?
-    <div>
-        <p>To complete your order we need some imformation first:</p>
+    <div className='checkoutContainer'>
+        <p className='textForm'>To complete your order we need some imformation first:</p>
         <form className='form' id='form'>
-            <label id="name-label">Name: <input placeholder="Name" required onInput={nameEvent} type="text" /></label>
-            <label id="number-label">Number: <input placeholder="Number" required onInput={numberEvent} type="text" /></label>
-            <label id="email-label">E-mail: <input placeholder="e-mail" required onInput={emailEvent} type="email" /></label>
-            <input type="submit" onClick={submit} value="Continue" />
-        </form>
-
-        
+            <label id="name-label"><input className='nameInput' placeholder="Name" required onInput={nameEvent} type="text" autoComplete='name'/></label>
+            <label id="number-label"><input className='numberInput' placeholder="Number" required onInput={numberEvent} type="text" autoComplete='tel' /></label>
+            <label id="email-label"><input className='emailInput' placeholder="E-mail" required onInput={emailEvent} type="email" /></label>
+            <input className='buttomContinue' type="submit" onClick={submit} value="Continue" />
+        </form>        
     </div>
     :
-    <div>
-        <p>{customer.name} by placing your order, you agree to online shopping's privacy notice and conditions of use.</p>
-        <p>Total: {total}</p>
-        <Link to='/'><button onClick={checkout}>Place your order</button></Link>
-        
+    <div className='checkoutContainer'>
+
+            <p className='textMesagge' >By placing your order, you agree to online shopping's privacy conditions of use.</p>
+            
+            <div className='table'>
+                <p className='textMesagge' id='TA'>Items ({quantityProducts}):</p>
+                <p className='textMesagge' id='TB'>Shipping & handling:</p>
+                <p className='textMesagge' id='TC'>Total before tax:</p>
+                <p className='textMesagge' id='TD'>Tax (21%):</p>
+           
+                <p className='textMesagge' id='TE'>Order total:</p>
+
+                <p id='T1'>${total}</p>
+                <p id='T2'>$20</p>
+                <p id='T3'>${totalbt}</p>
+                <p id='T4'>${taxes}</p>
+                <p id='T5'>${totalat}</p>
+            </div>
+        <Link to='/'><button className='buttomPlaceYourOrder' onClick={checkout}>Place your order</button></Link>
     </div>
 }
     </>

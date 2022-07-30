@@ -12,19 +12,35 @@
     color: #3f7eff;
     font-size: 1rem;
 }
+.total{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
 
-.ButtomsContainer{
+.ButtomsContainer, .buttomCheckoutContainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 .clearButtom ,.checkoutButtom{
     font-family: 'Roboto', sans-serif;
     background-color: #3f7eff;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     border: none;
     margin:  0.5rem 0;
     box-shadow: 1px 4px 3px #d5d5d5;
     cursor: pointer;
+    width: 25rem;
+    padding: 0.5rem;
+}
+
+.clearButtom:hover{
+    background-color: red;
+}
+
+.checkoutButtom:hover{
+    background-color: green;
 }
