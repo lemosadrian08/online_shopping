@@ -5,7 +5,7 @@ import { cartContext } from '../CartContext/CartContext.jsx'
 
 const CartCard =({id, title, price, quantity, pictureURL})=>{
 
-    const { removeItem , quantityProducts } = useContext(cartContext)
+    const { removeItem  } = useContext(cartContext)
 
 
     const borrar =()=>{
@@ -14,7 +14,6 @@ const CartCard =({id, title, price, quantity, pictureURL})=>{
 
 
     return(
-
             <div className='itemCartCardCountainer'>
                 <img className='imgCartCard' src={pictureURL} alt={title} />
                 <div className='itemCartCardInfoCountainer'>

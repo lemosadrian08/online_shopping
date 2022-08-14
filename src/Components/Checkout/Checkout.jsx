@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { cartContext } from '../CartContext/CartContext.jsx'
 import { db } from '../../firebase/firebase'
-import { addDoc, collection, doc, serverTimestamp } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import './Checkout.css'
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2'
@@ -86,6 +86,7 @@ const Checkout =()=>{
         <Link to='/'><button className='buttomPlaceYourOrder' onClick={checkout}>Place your order</button></Link>
     </div>
 }
+
     </>
     )
 }

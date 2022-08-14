@@ -8,7 +8,7 @@ import { cartContext } from '../CartContext/CartContext.jsx';
 
 
 
-const ItemDetail =({product, id,title,description,pictureURL,price})=>{
+const ItemDetail =({product,title,description,pictureURL,price})=>{
 
     const { addItem } = useContext(cartContext)
     
@@ -31,7 +31,7 @@ const ItemDetail =({product, id,title,description,pictureURL,price})=>{
                 <p className="descriptionDetail">{description}</p>
                 <p className="priceDetail">${price}</p>
                 {
-                units!=0
+                units!==0
                 ? <div className="goToCartContainer"><Link to='/cart'><button onClick={goToCart} className="goToCartButtom">Go to cart</button></Link></div>  
                 : <ItemCount stock={5} initial={0} onAdd={onAdd} />
                 }
