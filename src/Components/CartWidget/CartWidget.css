@@ -8,3 +8,12 @@
     font-size: 1rem;
     margin: 0.1rem;
 }
+
+@media (max-width: 990px){
+    .CartWidgetContainer{
+        position: absolute;
+        top: 1.75rem;
+        right:  5rem;;
+    }
+
+}

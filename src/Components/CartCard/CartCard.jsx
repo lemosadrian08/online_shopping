@@ -15,9 +15,6 @@ const CartCard =({id, title, price, quantity, pictureURL})=>{
 
     return(
 
-        <>
-        {
-      
             <div className='itemCartCardCountainer'>
                 <img className='imgCartCard' src={pictureURL} alt={title} />
                 <div className='itemCartCardInfoCountainer'>
@@ -28,9 +25,6 @@ const CartCard =({id, title, price, quantity, pictureURL})=>{
                     <ClearIcon onClick={borrar}/>
                 </div>
             </div>
-        }
-        </>
-        
     )
 
 

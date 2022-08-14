@@ -9,7 +9,7 @@
     font-family: 'Roboto', sans-serif; ;
 }
 .swal2-styled.swal2-confirm{
-    background-color: #3f7eff; ;
+    background-color: #e23fff; ;
     
 }
 
@@ -113,4 +113,9 @@ text-align: end;
 }
 #TE,#T5{
     font-weight: bold;
+}
+@media (max-width: 750px){
+    .checkoutContainer{
+        width: 90%;
+    }
 }

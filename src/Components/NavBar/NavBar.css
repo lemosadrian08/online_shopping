@@ -6,28 +6,71 @@ header {
     font-family: 'Roboto', sans-serif;
     height: 5rem;
     box-shadow: 1px 4px 3px #d5d5d5;
+	width: 100%;
 }
     
 .logo{
     width: 5rem;
 }
 
-nav{
-    width: 75%;
-}
 
-ul{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+.mobileNav{
+	display: flex;
+    flex-direction: column;
 }
 
 li{
-    margin: 1rem;
+	margin: 1rem;
 }
 
 a{
-    text-decoration: none;
+	text-decoration: none;
     font-size: 1.5rem;
     color: white;
+}
+
+.navNavigation{
+	width: 75%;
+}
+.navNavigation .ulNavigation{
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.navMobileNavigation{
+	display: none;
+}
+
+@media (max-width: 990px){
+	.navNavigation{
+		display: none;
+	}
+	.navMobileNavigation{
+		width: 75%;
+		display: flex;
+	}
+	.navMobileNavigation .ulNavigation{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: #3f7eff;;
+		width: 100%;
+		position: absolute;
+		top: 5rem;
+		right: 0;
+	}
+	
+	.navMobileNavigation .ulNavigation li a:hover{
+		color: aqua;
+	}
+
+	.navMobileNavigation .hamburgerIcon{
+		position: absolute;
+		right: 2rem;
+		top: 1.75rem;
+		cursor: pointer;
+	}
+
 }

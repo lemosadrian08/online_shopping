@@ -11,16 +11,14 @@ const Cart =()=>{
 
 
     return(
-
-        <>
-         {
+            
              quantityProducts===0
             ?
             <div className='emptyMessageContainer'>
                 <p className='emptyMessage'> Your cart is empty. Go check out our products by clicking <Link className='link' to='/'>here</Link></p>
             </div>
             :
-            <div>
+            <div className='CardCartContainer'>
                 {products.map((product)=><CartCard key={product.id} id={product.id} title={product.title} price={product.price} quantity={product.quantity} pictureURL={product.image} /> )}
                 <p className='total'>Total: ${total}</p>
                 <div className='ButtomsContainer'>
@@ -28,8 +26,6 @@ const Cart =()=>{
                     <button className='clearButtom' onClick= { clear }>Clear all products</button> 
                 </div>        
             </div>
-         }
-        </>
     )
 }
 

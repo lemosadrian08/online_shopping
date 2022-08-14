@@ -31,13 +31,6 @@ const ItemDetailContainer =()=>{
         })
         .catch(()=>setError(true))
         .finally(()=>setLoading(false)) 
-
-
-        /* fetch(`https://fakestoreapi.com/products/${itemId}`)
-            .then(res=>res.json())
-            .then(data=>setProduct(data))
-            .catch(()=>setError(true))
-            .finally(()=>setLoading(false)) */
         },[]) 
 
 

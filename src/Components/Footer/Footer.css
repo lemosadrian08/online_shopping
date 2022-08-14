@@ -1,0 +1,15 @@
+.Footer{
+    background:#3f7eff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+.textFooter{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    padding: 0.5rem;
+}

@@ -8,6 +8,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+.CardCartContainer{
+    width: 100%;
+}
+
+
 .link{
     color: #3f7eff;
     font-size: 1rem;

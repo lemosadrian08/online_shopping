@@ -5,7 +5,7 @@ import './ItemListContainer.css'
 import { useParams } from  "react-router-dom";
 import { db } from '../../firebase/firebase'
 import { getDocs, collection, query, where } from 'firebase/firestore'
-const ItemListContainer =({greeting})=>{
+const ItemListContainer =()=>{
     
     const {categoryName} = useParams()
 
@@ -32,23 +32,13 @@ const ItemListContainer =({greeting})=>{
         .catch(()=>setError(true))
         .finally(()=>setLoading(false))
 
-        /* onst URL = categoryName
-            ?`https://fakestoreapi.com/products/category/${categoryName}`
-            :'https://fakestoreapi.com/products'
-
-        fetch(URL)
-            .then(res=>res.json())
-            .then(data=>setProducts(data))
-            .catch(()=>setError(true))
-            .finally(()=>setLoading(false)) */
-
         },[categoryName]) 
 
 
     return(
         <>
             
-        {loading? <div className='spinnerContainer'><SpinnerDotted color='#004dff'/></div> :
+        {loading? <div className='spinnerContainer'><SpinnerDotted className='spinner' color='#004dff'/></div> :
             error? <p>Error</p> :
              <ItemList products={products} />
         }

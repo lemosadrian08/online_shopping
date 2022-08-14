@@ -85,3 +85,20 @@
     box-shadow: 1px 4px 3px #d5d5d5;
     cursor: pointer;
 }
+@media (max-width: 600px){
+.itemDetailCountainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    justify-content: center;
+}
+.imgDetail{
+    height: 25rem;
+}
+.itemDetailInfoCountainer{
+    height: auto;
+}
+}
+
+

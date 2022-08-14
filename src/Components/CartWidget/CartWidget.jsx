@@ -4,8 +4,6 @@ import { cartContext } from '../CartContext/CartContext.jsx'
 import './CartWidget.css'
 
 
-
-
 const CartWidget =()=>{
 
     const { quantityProducts } = useContext(cartContext)
